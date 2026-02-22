@@ -1,0 +1,19 @@
+# Dockerfile.consumer
+# Base Image: Official Apache Spark image with Python 3 support
+FROM apache/spark:3.5.1-python3
+
+# Switch to root user to allow package installation
+USER root
+
+# Set the working directory
+WORKDIR /app
+
+# Install PySpark and any other necessary Python libraries
+# (Including kafka-python-ng if your consumer script requires it for auxiliary tasks)
+RUN pip install --no-cache-dir pyspark kafka-python-ng
+
+# Copy your application code into the container
+COPY . /app
+
+# The default command can remain as an interactive placeholder for development
+CMD ["tail", "-f", "/dev/null"]
