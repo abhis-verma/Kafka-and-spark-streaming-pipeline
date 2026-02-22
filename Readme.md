@@ -14,7 +14,7 @@
 ---
 
 ## 🏗️ Architecture
-![Architecture Diagram](/Users/abhishek/Downloads/random/kafka-spark-streaming-pipeline.jpg)
+![Architecture Diagram](kafka-spark-streaming-pipeline.jpg)
 
 
 This project utilizes a microservices approach, entirely orchestrated via Docker Compose. 
